@@ -1,7 +1,7 @@
 <%= form_for Event.new do |form| %>
 <%= form.date_field :date %>
 <%= form.time_field :time %>
-<%= form.text_field :place %>
-<%= form.text_field :event %>
+<%= form.text_field :place, placeholder: "where is it taking place" %>
+<%= form.text_field :event, placeholder: "event name" %>
 <%= form.submit %>
 <% end %>
