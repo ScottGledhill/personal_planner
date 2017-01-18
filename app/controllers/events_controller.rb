@@ -3,9 +3,12 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def new
+  end
+
   def create
     Event.create(event_params)
-    redirect_to 'index'
+    redirect_to '/'
   end
 
   def show
