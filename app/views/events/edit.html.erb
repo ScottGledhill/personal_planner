@@ -1,8 +1,8 @@
 
-<%= form_for Event.new do |form| %>
-<%= form.date_field :date %>
-<%= form.time :time %>
-<%= form.text_field :place %>
-<%= form.text_field :event %>
-<%= form.submit %>
+<%= form_for @event do |form| %>
+  <%= form.date_field :date %>
+  <%= form.time_field :time %>
+  <%= form.text_field :place %>
+  <%= form.text_field :event %>
+  <%= form.submit %>
 <% end %>
