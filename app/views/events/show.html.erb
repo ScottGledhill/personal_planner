@@ -1,11 +1,10 @@
 
 
-<p>
-  Event  <%= @event.event %> <br />
-  Date  <%= @event.date %><br /><br / />
-  Time <%= @event.time %><br />
-  Place  <%= @event.place %><br />
+<table>
+  <%= @event.event %> <br />
+  <%= @event.date %><br /><br / />
+  <%= @event.place %><br />
 
-  <%= link_to "Edit #{@event.event}", edit_event_path(@event) %>
+  <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
   <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
-</p>
+</table>

@@ -7,6 +7,6 @@
 <p> <% @events.each do |event| %>
   <%= link_to event.event, event_path(event) %>
   <%= event.date %>
-  <%= event.time %>
+  <%= event.place %>
   <% end %>
 </p>
