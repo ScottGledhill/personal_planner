@@ -1,13 +1,19 @@
-  DATE   TIME         PLACE   EVENT   
+
 
 <%= form_for Event.new do |form| %>
 <%= form.date_field :date %>
-<%= form.time_field :time %>
+<%= form.datetime_local_field :time %>
 <%= form.text_field :place %>
 <%= form.text_field :event %>
+<%= form.submit %>
 <% end %>
 
 
-<%= @events.each do |event| %>
-  <% event %>
+
+
+<% @events.each do |event| %>
+  <%= event.event %>
+  <%= event.date %>
+  <%= event.time %>
+  <%= event.place %>
 <% end %>
