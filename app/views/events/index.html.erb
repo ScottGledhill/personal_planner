@@ -1,12 +1,15 @@
 
-<a href='events/new'>Add an event</a>
+<div id="add">
+  <form action="events/new">
+    <input type="submit" value="Add an event" />
+  </form>
+</div>
 
-
-
-
-<p> <% @events.each do |event| %>
+<div id="events">
+  <% @events.each do |event| %>
   <%= link_to event.event, event_path(event) %>
   <%= event.date %>
   <%= event.place %>
+  <br />
   <% end %>
-</p>
+<div>

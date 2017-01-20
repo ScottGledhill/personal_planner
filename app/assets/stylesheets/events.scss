@@ -1,3 +1,23 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#add {
+  position: absolute;
+  top:  30%;
+  left: 50%;
+  background-color: beige
+}
+
+#events {
+  color: red;
+  font-size: 32px;
+  position: absolute;
+  top:  30%;
+  left: 40%;
+}
+
+
+body {
+  background-color: beige
+}

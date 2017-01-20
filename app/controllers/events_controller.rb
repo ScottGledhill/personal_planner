@@ -3,11 +3,8 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def new
-  end
-
   def create
-    Event.create(event_params)
+    @events = Event.create(event_params)
     redirect_to '/'
   end
 
