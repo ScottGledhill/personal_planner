@@ -1,9 +1,10 @@
 <br />
 
-
+<div class="new">
 <%= form_for Event.new do |form| %>
 <%= form.date_field :date %>
 <%= form.text_field :place, placeholder: "where and when" %>
 <%= form.text_field :event, placeholder: "event name" %>
 <%= form.submit %>
 <% end %>
+</div>

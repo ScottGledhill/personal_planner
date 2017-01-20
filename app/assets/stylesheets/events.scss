@@ -4,19 +4,24 @@
 
 #add {
   position: absolute;
+  z-index:9999;
   top:  30%;
   left: 50%;
-  background-color: beige
 }
 
 #events {
   color: red;
-  font-size: 32px;
+  font-size: 22px;
   position: absolute;
-  top:  30%;
-  left: 40%;
+  top:  31%;
+  left: 43%;
 }
 
+.new {
+  position: absolute;
+  top:  37%;
+  left: 34%;
+}
 
 body {
   background-color: beige
