@@ -1,9 +1,8 @@
 <div class="edit">
 <%= form_for @event do |form| %>
   <%= form.date_field :date %>
-  <%= form.time_field :time %>
-  <%= form.text_field :place %>
-  <%= form.text_field :event %>
+  <%= form.text_field :place, :required => true %>
+  <%= form.text_field :event, :required => true %>
   <%= form.submit %>
 <% end %>
 </div>
