@@ -3,4 +3,5 @@ class Event < ApplicationRecord
   validates_presence_of :place, :event, :image
   validates_attachment :image, :presence => true,
   :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] }
+  has_many :comments
 end

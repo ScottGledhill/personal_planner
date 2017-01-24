@@ -1,0 +1,5 @@
+
+<%= form_for @comment, url: event_comments_path(@comment.event) do |form| %>
+<%= form.text_field :body, placeholder: "comment", :required => true %>
+<%= form.submit %>
+<% end %>
