@@ -4,6 +4,7 @@
   <%= @event.event %> <br />
   <%= @event.date %><br /><br / />
   <%= @event.place %><br />
+  <%= @event.image %><br />
 
   <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
   <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
