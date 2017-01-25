@@ -4,7 +4,7 @@
 <%= form.date_field :date %>
 <%= form.text_field :place, placeholder: "where and when", :required => true %>
 <%= form.text_field :event, placeholder: "event name", :required => true %>
-<%= form.file_field :image %>
+<%= form.file_field :image, :required => true %>
 <%= form.submit %>
 <% end %>
 </div>
