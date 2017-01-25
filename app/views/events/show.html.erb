@@ -1,11 +1,20 @@
 <%= link_to 'Back', events_path %>
 
 <div class="show">
-  <%= @event.user.email %>
   <%= @event.event %> <br />
+  created by <%= @event.user.email %> <br />
   <%= @event.date %><br />
   <%= @event.place %><br />
-  <%= link_to 'I went to this event', new_event_attendance_path(@event) %>
+  <%= link_to 'Im attending this event', new_event_attendance_path(@event) %>
+  <br /><br />
+  Attendees
+  <ul>
+    <% @event.users.each do |user| %>
+    <li>
+      <%= user.email %>
+    </li>
+    <% end %>
+  </ul>
 
   <% if @event.comments.any? %>
     <ul>
@@ -20,15 +29,6 @@
   <div class="image">
     <%= image_tag @event.image %><br />
   </div>
-
-Attendees
-<ul>
-  <% @event.users.each do |user| %>
-    <li>
-      <%= user.email %>
-    </li>
-  <% end %>
-</ul>
 
 <br />
   <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
