@@ -13,11 +13,13 @@
         </li>
     <% end %>
   <% else %>
-    <p>No reviews.</p>
+    <p>No comments yet</p>
   <% end %>
+  <div class="image">
+    <%= image_tag @event.image %><br />
+  </div>
 
-  <%= image_tag @event.image %><br />
-
+<br />
   <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
   <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
   <br />

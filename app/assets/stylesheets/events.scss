@@ -24,11 +24,11 @@
 }
 
 .show {
-  color: DARKSALMON;
+  color: hotpink;
   position: absolute;
-  top:  29%;
+  top:  9%;
   left: 34%;
-  font-size: 44px;
+  font-size: 32px;
 }
 
 .edit {
@@ -39,4 +39,19 @@
 
 body {
   background-color: beige
+}
+
+.image {
+  position: absolute;
+  top:  37%;
+  left: 100%;
+}
+
+a {
+  color: hotpink;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
 }
