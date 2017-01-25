@@ -2,10 +2,24 @@
 
 <div class="show">
   <%= @event.event %> <br />
-  <%= @event.date %><br /><br / />
+  <%= @event.date %><br />
   <%= @event.place %><br />
+
+  <% if @event.comments.any? %>
+    <ul>
+      <% @event.comments.each do |comment| %>
+        <li>
+          <%= comment.body %>
+        </li>
+    <% end %>
+  <% else %>
+    <p>No reviews.</p>
+  <% end %>
+
   <%= image_tag @event.image %><br />
 
   <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
   <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
+  <br />
+  <%= link_to "Add comment", new_event_comment_path(@event) %>
 </div>
