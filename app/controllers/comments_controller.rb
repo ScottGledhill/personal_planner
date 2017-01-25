@@ -5,9 +5,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @event = Event.find(params[:event_id])
-    @event.comments.create(comment_params)
-    redirect_to "/"
+    event = Event.find(params[:event_id])
+    @comment = event.comments.new(comment_params)
+    if @comment.save
+      redirect_to "/"
+    else
+      render :new
+    end
   end
 
   private

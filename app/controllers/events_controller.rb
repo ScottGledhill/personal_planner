@@ -6,7 +6,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @events = Event.create(event_params)
+    @event = Event.new(event_params)
+    @event.user = current_user
+    @event.save!
     redirect_to '/'
   end
 
@@ -16,17 +18,20 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    #do it
   end
 
   def update
     @event = Event.find(params[:id])
-    @event.update_attributes(event_params)
+    @event.update(event_params)
     redirect_to ('/')
   end
 
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
+    if current_user == @event.user
+      @event.destroy
+    end
     redirect_to ('/')
   end
 
