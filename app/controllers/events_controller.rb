@@ -18,7 +18,9 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
-    #do it
+    if current_user != @event.user
+      flash[:notice] = 'Can only edit events that you made'
+    end
   end
 
   def update

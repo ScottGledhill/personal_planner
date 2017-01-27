@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   def create
     event = Event.find(params[:event_id])
     @comment = event.comments.new(comment_params)
-    if @comment.save
+    if @comment.save!
       redirect_to "/"
     else
       render :new
