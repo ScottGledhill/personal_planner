@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   def create
     event = Event.find(params[:event_id])
     @comment = event.comments.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save!
       redirect_to "/"
     else

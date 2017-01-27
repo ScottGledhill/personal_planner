@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     resources :attendances, only: [:new]
     resources :comments, only: [:new, :create]
   end
-  resources :attendees, only: [:show]
+  # resources :users, only: [:show]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 end
