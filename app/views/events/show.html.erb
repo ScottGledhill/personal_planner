@@ -16,16 +16,15 @@
     <% end %>
   </ul>
 
+  Comments<br /><br />
   <% if @event.comments.any? %>
-    <ul>
       <% @event.comments.each do |comment| %>
-        <li>
-          <%= comment.body %>
-        </li>
+          <%= comment.body %> by <%= comment.user.email %> <br />
     <% end %>
   <% else %>
     <p>No comments yet</p>
   <% end %>
+  <br />
   <div class="image">
     <%= image_tag @event.image %><br />
   </div>
