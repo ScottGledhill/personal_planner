@@ -1,8 +1,11 @@
 <div class="edit">
 <%= form_for @event do |form| %>
   <%= form.date_field :date %>
-  <%= form.text_field :place, :required => true %>
-  <%= form.text_field :event, :required => true %>
+  <%= form.text_field :place, placeholder: "where and when", :required => true %>
+  <%= form.text_field :event, placeholder: "event name", :required => true %>
+  <%= form.file_field :image, :required => true %>
   <%= form.submit %>
 <% end %>
 </div>
+
+<%= link_to 'Back', events_path %>

@@ -1,7 +1,7 @@
 <%= link_to 'Back', events_path %>
 
 <div class="show">
-  <%= @event.event %> 
+  <%= @event.event %>
   created by <%= @event.user.email %> <br />
   <%= @event.date %><br />
   <%= @event.place %><br />
@@ -27,7 +27,9 @@
   <div class="comments">
   <% if @event.comments.any? %>
       <% @event.comments.each do |comment| %>
-          <%= comment.body %> by <%= comment.user.email %> <br />
+          <%= comment.body %> by <%= comment.user.email %>
+          <%= link_to "Edit", edit_comment_path(comment) %>
+          <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
     <% end %>
   <% else %>
     <p>No comments yet</p>

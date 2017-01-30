@@ -1,0 +1,7 @@
+
+<%= form_for @comment, url: comment_path(@comment) do |form| %>
+<%= form.text_field :body, placeholder: "comment", required: true %>
+<%= form.submit %>
+<% end %>
+
+<%= link_to 'Back', events_path %>
