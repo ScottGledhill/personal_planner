@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @comment = event.comments.new(comment_params)
     @comment.user_id = current_user.id
     if @comment.save!
-      redirect_to "/"
+      redirect_to event_path(event)
     else
       render :new
     end
