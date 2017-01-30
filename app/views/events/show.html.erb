@@ -15,34 +15,10 @@
     <% @event.users.each do |user| %>
     <li>
       <%= user.email %>
+      <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %>
     </li>
     <% end %>
   </ul>
 </div>
 
-  <div class="titles">
-  Comments<br /><br />
-  </div>
-
-  <div class="comments">
-  <% if @event.comments.any? %>
-      <% @event.comments.each do |comment| %>
-          <%= comment.body %> by <%= comment.user.email %>
-          <%= link_to "Edit", edit_comment_path(comment) %>
-          <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
-    <% end %>
-  <% else %>
-    <p>No comments yet</p>
-  <% end %>
-  <br />
-  <div class="image">
-    <%= image_tag @event.image %>
-  </div>
-</div>
-
-  <%= link_to "Add a comment", new_event_comment_path(@event) %>
-  <br />
-  <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
-  <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
-  <br />
-</div>
+<%= render 'comments' %>
