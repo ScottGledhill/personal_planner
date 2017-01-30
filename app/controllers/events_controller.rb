@@ -19,7 +19,8 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
     if current_user != @event.user
-      flash[:notice] = 'Can only edit events that you made'
+      flash[:notice] = 'Can only edit events that you created'
+      redirect_to event_path(@event)
     end
   end
 
@@ -33,8 +34,11 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     if current_user == @event.user
       @event.destroy
+      redirect_to ('/')
+    else
+       flash[:notice] = 'Can\'t delete other peoples events'
+       redirect_to event_path(@event)
     end
-    redirect_to ('/')
   end
 
   private
