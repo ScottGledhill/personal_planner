@@ -1,0 +1,13 @@
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ ul.hmenu {
+  list-style: upper-alpha;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;
+}
