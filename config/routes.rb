@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'events#index'
   resources :events do
-    resources :attendances, only: [:new, :destroy]
+    resources :attendances, only: [:destroy, :create]
     resources :comments, shallow: true
   end
   # resources :users, only: [:show]

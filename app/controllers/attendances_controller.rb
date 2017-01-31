@@ -1,5 +1,5 @@
 class AttendancesController < ApplicationController
-  def new
+  def create
     @event = Event.find(params[:event_id])
     @attendance = Attendance.new
     @attendance.event = @event
