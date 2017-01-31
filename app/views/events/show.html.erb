@@ -2,7 +2,7 @@
 
 <div class="show">
   <%= @event.event %>
-  created by <%= @event.user.email %> <br />
+  created by <%= @event.user.username %> <br />
   <%= @event.date %><br />
   <%= @event.place %><br />
   <%= link_to 'Im attending this event', event_attendances_path(@event), method: :create %>
@@ -15,7 +15,7 @@
   <ul>
     <% @event.users.each do |user| %>
     <li>
-      <%= user.email %>
+      <%= user.username %>
       <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %>
     </li>
     <% end %>

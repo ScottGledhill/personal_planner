@@ -5,7 +5,7 @@ Comments<br /><br />
 <div class="comments">
 <% if @event.comments.any? %>
     <% @event.comments.each do |comment| %>
-        <%= comment.body %> by <%= comment.user.email %>
+        <%= comment.body %> by <%= comment.user.username %>
         <%= link_to "Edit", edit_comment_path(comment) %>
         <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
   <% end %>
