@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, :except => [:index]
 
   def index
-    @events = Event.order(date: :desc).reverse
+    @events = Event.order(date: :asc)
   end
 
   def create
