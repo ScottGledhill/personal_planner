@@ -6,9 +6,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
-    @event.user = current_user
-    @event.save!
+    event = Event.new(event_params)
+    event.user = current_user
+    event.save!
     redirect_to '/'
   end
 
@@ -25,19 +25,19 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event = Event.find(params[:id])
-    @event.update(event_params)
+    event = Event.find(params[:id])
+    event.update(event_params)
     redirect_to ('/')
   end
 
   def destroy
-    @event = Event.find(params[:id])
-    if current_user == @event.user
-      @event.destroy
+    event = Event.find(params[:id])
+    if current_user == event.user
+      event.destroy
       redirect_to ('/')
     else
        flash[:notice] = 'Can\'t delete other peoples events'
-       redirect_to event_path(@event)
+       redirect_to event_path(event)
     end
   end
 

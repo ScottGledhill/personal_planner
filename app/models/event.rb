@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   has_many :comments, dependent: :destroy
   belongs_to :user
   has_many :attendances
-  has_many :users, through: :attendance
+  has_many :users, through: :attendances
   after_create :log_event
 
   private
