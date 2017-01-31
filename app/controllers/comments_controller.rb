@@ -6,9 +6,9 @@ class CommentsController < ApplicationController
 
   def create
     event = Event.find(params[:event_id])
-    @comment = event.comments.new(comment_params)
-    @comment.user_id = current_user.id
-    if @comment.save!
+    comment = event.comments.new(comment_params)
+    comment.user_id = current_user.id
+    if comment.save!
       redirect_to event_path(event)
     else
       render :new
@@ -24,22 +24,22 @@ class CommentsController < ApplicationController
   end
 
   def update
-    @comment = Comment.find(params[:id])
-    if @comment.update(comment_params)
-      redirect_to event_path(@comment.event)
+    comment = Comment.find(params[:id])
+    if comment.update(comment_params)
+      redirect_to event_path(comment.event)
     else
       render :edit
     end
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    if current_user == @comment.user
-      @comment.destroy
+    comment = Comment.find(params[:id])
+    if current_user == comment.user
+      comment.destroy
     else
       flash[:notice] = 'Can\'t delete other peoples comments'
     end
-    redirect_to event_path(@comment.event)
+    redirect_to event_path(comment.event)
   end
 
   private
