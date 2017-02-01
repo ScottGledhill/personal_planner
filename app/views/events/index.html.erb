@@ -5,11 +5,11 @@
   </form>
 </div>
 
- <div id="events">
-  <% @events.each do |event| %>
-  <%= link_to event.event, event_path(event) %>
-  <%= event.date %>
-  <%= event.place %>
-  <br />
-  <% end %>
+    <% @events.each do |event| %>
+    <%= link_to event.event, event_path(event) %>
+    <%= event.date %>
+    <%= event.place %>
+    <br />
+    <% end %>
+  </div>
 </div>

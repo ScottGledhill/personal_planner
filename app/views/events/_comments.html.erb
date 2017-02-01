@@ -2,13 +2,16 @@
 Comments<br /><br />
 </div>
 
-<div class="comments">
 <% if @event.comments.any? %>
+<div class="panel panel-default">
     <% @event.comments.each do |comment| %>
+      <div class="panel-body">
         <%= comment.body %> by <%= comment.user.username %>
         <%= link_to "Edit", edit_comment_path(comment) %>
         <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
   <% end %>
+</div>
+</div>
 <% else %>
   <p>No comments yet</p>
 <% end %>
