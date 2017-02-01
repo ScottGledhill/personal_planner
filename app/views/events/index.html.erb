@@ -1,9 +1,6 @@
 
-<div class="container">
-  <form action="events/new">
-    <input class="btn btn-link btn-lg" type="submit" value="Add a new event">
-  </form>
 
+<div class="container">
 <table class="table table-hover">
   <thead>
     <tr>
@@ -13,6 +10,9 @@
     </tr>
   <thead>
 
+    <form action="events/new">
+      <input class="btn btn-link btn-lg" type="submit" value="Add a new event">
+    </form>
   <% @events.each do |event| %>
   <tbody>
   <tr>
@@ -25,3 +25,4 @@
    <tr>
    </table>
   </div>
+</div>

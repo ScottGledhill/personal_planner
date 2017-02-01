@@ -1,6 +1,8 @@
+
 <div class="titles">
 Comments<br /><br />
 </div>
+<%= link_to "Add a comment", new_event_comment_path(@event) %>
 
 <% if @event.comments.any? %>
 <div class="panel panel-default">
@@ -16,14 +18,11 @@ Comments<br /><br />
   <p>No comments yet</p>
 <% end %>
 <br />
-<div class="image">
+
+<div class="img-rounded">
   <%= image_tag @event.image %>
 </div>
-</div>
 
-<%= link_to "Add a comment", new_event_comment_path(@event) %>
-<br />
-<%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br />
+
+<%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br /><br />
 <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
-<br />
-</div>

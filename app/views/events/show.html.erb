@@ -1,25 +1,31 @@
-<%= link_to 'Back', events_path %>
+<br /><%= link_to 'Back', events_path %>
 
-<div class="show">
-  <%= @event.event %>
-  created by <%= @event.user.username %> <br />
-  <%= @event.date %><br />
-  <%= @event.place %><br />
+<br /><br />
+
+ <div class="panel panel-default">
+  <div class="panel-body">
+    <%= @event.event %>
+    created by <%= @event.user.username %> <br />
+    <%= @event.date %><br />
+    <%= @event.place %><br />
+  </div>
+  </div>
   <%= link_to 'Im attending this event', event_attendances_path(@event), method: :create %>
 
   <br /><br />
   <div class="titles">
   Attendees
 </div>
+<div class="panel panel-default">
+ <div class="panel-body">
 <div class="attendees">
-  <ul>
     <% @event.users.each do |user| %>
-    <li>
       <%= user.username %>
       <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %>
-    </li>
     <% end %>
-  </ul>
+  </div>
+  </div>
 </div>
+
 
 <%= render 'comments' %>
