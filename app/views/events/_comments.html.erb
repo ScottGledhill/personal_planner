@@ -9,8 +9,8 @@ Comments<br /><br />
         <%= comment.body %> by <%= comment.user.username %>
         <%= link_to "Edit", edit_comment_path(comment) %>
         <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
+      </div>
   <% end %>
-</div>
 </div>
 <% else %>
   <p>No comments yet</p>
