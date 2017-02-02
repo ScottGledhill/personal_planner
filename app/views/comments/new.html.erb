@@ -1,7 +1,10 @@
-
+<div class="form-group">
 <%= form_for @comment, url: event_comments_path(@comment.event) do |form| %>
 <%= form.text_field :body, placeholder: "comment", :required => true %>
 <%= form.submit %>
 <% end %>
 
+</div>
+<div id='new-back'>
 <%= link_to 'Back', events_path %>
+</div>
