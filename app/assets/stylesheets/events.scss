@@ -7,6 +7,8 @@
 }
 
 #new-back {
+  font-weight: bold;
+  font-style: italic;
   position: absolute;
   top: 0;
   left: 0;
@@ -44,5 +46,21 @@
 }
 
 .comments-show-body {
-  margin-left: 10px
+  margin-left: 10px,
+}
+
+.form-group {
+  color: #337ab7;
+  position:fixed;
+  top:40%;
+  left:30%;
+  width:1900px;
+}
+
+.new-add {
+  font-size: 20px;
+  color: #E75480;
+  position:fixed;
+  top:34%;
+  left:43%;
 }
