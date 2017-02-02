@@ -1,31 +1,30 @@
+<div class="show-body">
+<div id="new-back"
 <br /><%= link_to 'Back', events_path %>
+</div>
 
 <br /><br />
-
- <div class="panel panel-default">
-  <div class="panel-body">
+<h1 id= "event-names">
     <%= @event.event %>
-    created by <%= @event.user.username %> <br />
-    <%= @event.date %><br />
-    <%= @event.place %><br />
-  </div>
-  </div>
+  </h1>
+    <div id ="nit"> created by </div>
+    <h4 id= "event-titles"><%= @event.user.username %> </h4>
+    <div id ="nit"> taking place on the </div>
+    <h4 id= "event-titles"><%= @event.date %><br /></h1>
+    <div id ="nit"> at </div>
+    <h4 id= "event-titles"> <%= @event.place %><br /></h4>
+  <div id = "lnkz">
   <%= link_to 'Im attending this event', event_attendances_path(@event), method: :create %>
+  </div>
+<br />
+<div id ="nit">  Attendees: </div>
 
-  <br /><br />
-  <div class="titles">
-  Attendees
-</div>
-<div class="panel panel-default">
- <div class="panel-body">
 <div class="attendees">
     <% @event.users.each do |user| %>
       <%= user.username %>
       <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %>
     <% end %>
   </div>
-  </div>
-</div>
-
 
 <%= render 'comments' %>
+</div>

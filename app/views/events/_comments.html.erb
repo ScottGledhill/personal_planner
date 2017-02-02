@@ -1,19 +1,16 @@
-
 <div class="titles">
 Comments<br /><br />
 </div>
+<div id = "lnkz">
 <%= link_to "Add a comment", new_event_comment_path(@event) %>
-
-<% if @event.comments.any? %>
-<div class="panel panel-default">
-    <% @event.comments.each do |comment| %>
-      <div class="panel-body">
-        <%= comment.body %> by <%= comment.user.username %>
-        <%= link_to "Edit", edit_comment_path(comment) %>
-        <%= link_to "Delete", comment_path(comment), method: :delete %> 
-      </div>
-  <% end %>
 </div>
+<% if @event.comments.any? %>
+    <% @event.comments.each do |comment| %>
+        <%= comment.body %><div id = "nit"> by </div>
+        <%= comment.user.username %>
+        <%= link_to "Edit", edit_comment_path(comment) %>
+        <%= link_to "Delete", comment_path(comment), method: :delete %><br>
+  <% end %>
 <% else %>
   <p>No comments yet</p>
 <% end %>
@@ -23,6 +20,7 @@ Comments<br /><br />
   <%= image_tag @event.image %>
 </div>
 
-
+  <h4 id= "event-titles">
 <%= link_to "Edit #{@event.event}", edit_event_path(@event) %><br /><br />
 <%= link_to "Delete #{@event.event}", event_path(@event), method: :delete %>
+</h4>

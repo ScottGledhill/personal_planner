@@ -3,20 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .img-rounded {
-  position: absolute;
-  top: 30px;
-  left: 500px;
-}
-
-.panel-body {
-  color: #E75480;
-}
-
-.form-group {
-  margin: 0 auto;
-  text-align:center;
-  margin-top: 69px;
-  max-width: 280px;
+  opacity: 0.7;
 }
 
 #new-back {
@@ -24,4 +11,38 @@
   top: 0;
   left: 0;
   margin: 52px;
+}
+
+.show-body {
+  margin-left: 10px;
+  margin-top: 28px;
+  color: #E75480;
+  max-width: 440px;
+  border-radius: 0;
+}
+
+#event-name {
+  margin-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#event-titles {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#nit {
+  display: inline-block;
+  color: grey;
+  padding: 5px;
+}
+
+#lnkz {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.comments-show-body {
+  margin-left: 10px
 }
