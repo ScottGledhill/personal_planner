@@ -28,23 +28,16 @@ ul.hmenu li {
   display: inline;
 }
 
-#sign_out a {
+#sign_out {
   position: absolute;
   top: 0;
   right: 0;
   margin: 52px;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  height: 100%;
-}
 
 .container {
+  margin-top: 99px;
   display: flex;
   flex-direction: column;
   align-items: center;

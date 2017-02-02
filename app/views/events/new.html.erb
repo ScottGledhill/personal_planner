@@ -1,5 +1,5 @@
-<div class="form-group" 
-<%= bootstrap_form_for Event.new, layout: :inline do |form| %>
+<div class="form-group">
+<%= bootstrap_form_for Event.new do |form| %>
 <%= form.date_field :date %>
 <%= form.text_field :place, placeholder: "where and when", :required => true %>
 <%= form.text_field :event, placeholder: "event name", :required => true %>

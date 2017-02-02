@@ -14,11 +14,14 @@
 
 .form-group {
   margin: 0 auto;
-  margin-top: 60px;
+  text-align:center;
+  margin-top: 69px;
+  max-width: 280px;
 }
 
 #new-back {
-  position: fixed;
-  right: 1059px;
-  top: 55px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 52px;
 }
