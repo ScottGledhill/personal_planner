@@ -1,4 +1,3 @@
-
 <div class="form-group" class="form-control">
 <%= bootstrap_form_for Event.new, layout: :inline do |form| %>
 <%= form.date_field :date %>
@@ -8,6 +7,8 @@
 <%= form.submit %>
 <% end %>
 </div>
+</div>
 
-
+<div id='new-back'>
 <%= link_to 'Back', events_path %>
+</div>

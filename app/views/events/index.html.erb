@@ -8,18 +8,20 @@
       <th>Date</th>
       <th>Place</th>
     </tr>
-  <thead>
+  </thead>
 
-    <form action="events/new">
-      <input class="btn btn-link btn-lg" type="submit" value="Add a new event">
-    </form>
+    <div id="button_form">
+      <form action="events/new">
+        <input class="btn btn-link btn-lg" type="submit" value="Add a new event">
+      </form>
+    </div>
+
   <% @events.each do |event| %>
   <tbody>
   <tr>
     <td> <%= link_to event.event, event_path(event) %></td>
     <td> <%= event.date %></td>
     <td> <%= event.place %></td>
-    <br /><br /><br />
     <% end %>
   </tr>
    <tr>

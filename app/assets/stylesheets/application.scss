@@ -15,8 +15,6 @@
  *= require rails_bootstrap_forms
  */
 
-
-
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -28,4 +26,37 @@
 
 ul.hmenu li {
   display: inline;
+}
+
+#sign_out a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 52px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container table {
+  align-items: center;
+  justify-content: center;
+}
+
+.container input {
+  border: solid;
+  border-radius: 4px;
 }

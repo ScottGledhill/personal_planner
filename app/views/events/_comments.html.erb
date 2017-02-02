@@ -10,7 +10,7 @@ Comments<br /><br />
       <div class="panel-body">
         <%= comment.body %> by <%= comment.user.username %>
         <%= link_to "Edit", edit_comment_path(comment) %>
-        <%= link_to "Delete", comment_path(comment), method: :delete %> <br />
+        <%= link_to "Delete", comment_path(comment), method: :delete %> 
       </div>
   <% end %>
 </div>
