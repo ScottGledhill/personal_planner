@@ -30,6 +30,7 @@
 }
 
 #event-titles {
+  display: inline;
   font-weight: bold;
   font-style: italic;
 }
@@ -63,4 +64,8 @@
   position:fixed;
   top:34%;
   left:43%;
+}
+
+.comments {
+  display: inline-block;
 }

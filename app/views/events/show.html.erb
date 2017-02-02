@@ -8,23 +8,22 @@
     <%= @event.event %>
   </h1>
     <div id ="nit"> created by </div>
-    <h4 id= "event-titles"><%= @event.user.username %> </h4>
+    <h4 id= "event-titles"><%= @event.user.username %> </h4></br>
     <div id ="nit"> taking place on the </div>
     <h4 id= "event-titles"><%= @event.date %><br /></h1>
     <div id ="nit"> at </div>
-    <h4 id= "event-titles"> <%= @event.place %><br /></h4>
+    <h4 id= "event-titles"> <%= @event.place %><br /></h4><br />
   <div id = "lnkz">
-  <%= link_to 'Im attending this event', event_attendances_path(@event), method: :create %>
+  <%= link_to 'Click to attend this event', event_attendances_path(@event), method: :create %>
   </div>
 <br />
-<div id ="nit">  Attendees: </div>
+<div id ="nit">  Attendees: </div><br />
 
-<div class="attendees">
     <% @event.users.each do |user| %>
-      <%= user.username %>
-      <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %>
-    <% end %>
-  </div>
+      <h5 id="event-titles"><%= user.username %></h5>
+      <%= link_to 'Unattend', event_attendance_path(@event), method: :delete %><br />
+    <% end %><br />
+
 
 <%= render 'comments' %>
 </div>
