@@ -1,5 +1,6 @@
 class Fixdevise < ActiveRecord::Migration[5.0]
   def change
+    create_table :users
     add_column :users,  :email, :string
     add_column :users,  :encrypted_password, :string
     add_column :users,  :reset_password_token, :string
