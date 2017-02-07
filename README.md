@@ -1,6 +1,6 @@
 # Planner
 
-This is an app I have created so that I will never forget about upcoming events!
+This is a Ruby on Rails app I have created so that I will never forget about upcoming events!
 It is currently used by my friends and family to create, read, update or delete
 events which they wish me to attend, events added must include a picture and
 anyone can click to attend or comment on the event!
