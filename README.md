@@ -1,24 +1,13 @@
-# README
+# Planner
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app I have created so that I will never forget about upcoming events!
+It is currently used by my friends and family to create, read, update or delete
+events which they wish me to attend, events added must include a picture and
+anyone can click to attend or comment on the event!
 
-Things you may want to cover:
+You can only edit and delete events or comments created by yourself, and you can only
+un-attend yourself.
 
-* Ruby version
+It has an API which you can use to get the current list of events, or comments.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app itself can be found at https://starburstplanner.herokuapp.com
