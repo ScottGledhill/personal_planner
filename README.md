@@ -11,3 +11,11 @@ un-attend yourself.
 It has an API which you can use to get the current list of events, or comments.
 
 The app itself can be found at https://starburstplanner.herokuapp.com
+
+## Show Event Page
+
+![Event](https://github.com/ScottGledhill/personal_planner/blob/master/app/assets/images/event.png)
+
+## Index Page
+
+![landing](https://github.com/ScottGledhill/personal_planner/blob/master/app/assets/images/landing_page.png)
