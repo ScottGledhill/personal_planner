@@ -1,14 +1,12 @@
 class Api::V1::CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token
-
-  API_KEY = '123'
+  before_action :has_valid_api_key?
 
  def index
     render json: Event.find(params[:event_id]).comments
   end
 
   def create
-    return render plain: 'noooo' unless has_valid_api_key?
     event = Event.find(params[:event_id])
     comment = event.comments.new(comment_params)
     comment.save!
@@ -17,7 +15,7 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def has_valid_api_key?
-    request.headers['X-Api-Key'] == API_KEY
+    request.headers['X-Api-Key'] == AUTH_DETAILS["api_key"]
   end
 
   def comment_params

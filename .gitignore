@@ -16,3 +16,4 @@
 # Ignore Byebug command history file.
 .byebug_history
 /public/system/events/images/**/*
+/config/authentication_details.yml
