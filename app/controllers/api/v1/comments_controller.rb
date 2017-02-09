@@ -1,6 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :has_valid_api_key?
+  before_action :forbidden_unless_api_key
 
  def index
     render json: Event.find(params[:event_id]).comments
@@ -13,6 +13,10 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   private
+
+  def forbidden_unless_api_key
+    return head status: :forbidden unless has_valid_api_key?
+  end
 
   def has_valid_api_key?
     request.headers['X-Api-Key'] == AUTH_DETAILS["api_key"]
