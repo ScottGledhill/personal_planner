@@ -25,5 +25,15 @@ feature 'Comments' do
       click_button('Create Comment')
       expect(page).to have_content 'first comment'
     end
+
+    scenario 'can edit a comment' do
+      click_link 'Add a comment'
+      fill_in 'comment_body', with: 'first comment'
+      click_button('Create Comment')
+      click_link 'Edit'
+      fill_in 'comment_body', with: 'edited comment'
+      click_button('Update Comment')
+      expect(page).to have_content 'edited comment'
+    end
   end
 end
