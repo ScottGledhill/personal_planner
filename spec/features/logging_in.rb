@@ -34,4 +34,9 @@ feature 'sign_up' do
       expect(page).to have_content 'Signed in successfully.'
     end
   end
+
+  scenario 'should sign out successfully' do
+    click_link('Sign_out')
+    expect(page).to have_content 'Signed out successfully.'
+  end
 end
