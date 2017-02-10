@@ -13,4 +13,25 @@ feature 'sign_up' do
       expect(page).to have_content 'Welcome! You have signed up successfully.'
     end
   end
+
+  context 'sign in' do
+    before do
+      visit '/'
+      click_link('Sign up')
+      fill_in('Username', with: 'testusername')
+      fill_in('Email', with: 'test@example.com')
+      fill_in('Password', with: 'testtest')
+      fill_in('Password confirmation', with: 'testtest')
+      click_button('Sign up')
+      click_link('Sign out')
+    end
+
+    scenario 'should sign in successfully' do
+      click_link('Sign in')
+      fill_in('Login', with: 'test@example.com')
+      fill_in('Password', with: 'testtest')
+      click_button('Log in')
+      expect(page).to have_content 'Signed in successfully.'
+    end
+  end
 end
