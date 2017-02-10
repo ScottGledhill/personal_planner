@@ -19,3 +19,7 @@ The app itself can be found at https://starburstplanner.herokuapp.com
 ## Index Page
 
 ![landing](https://github.com/ScottGledhill/personal_planner/blob/master/app/assets/images/landing_page.png)
+
+## Sign up Page
+
+![Sign_up](https://github.com/ScottGledhill/personal_planner/blob/master/app/assets/images/signup.png)
